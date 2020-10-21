@@ -45,3 +45,5 @@ public class ex2 {
  System.out.println("the average of movie"+movie[i]+"is"+ double avg);
     
 
+
+
