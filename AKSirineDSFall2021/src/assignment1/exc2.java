@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author hp
  */
-public class ex2 {
+public class exc2 {
       public static void main(String[]args){
  int nbattendees=2;
  int min=0,max=0;
