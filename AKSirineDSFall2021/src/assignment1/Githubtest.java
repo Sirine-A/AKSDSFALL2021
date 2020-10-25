@@ -10,5 +10,5 @@ package assignment1;
  * @author hp
  */
 public class Githubtest {
-    
+    null;
 }
