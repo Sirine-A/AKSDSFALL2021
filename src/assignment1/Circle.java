@@ -29,7 +29,7 @@ public class Circle {
  {return radius*radius*Math.PI;}
  public void print()
  {System.out.println("the Circle has radius of"+radius);
- }
+ }}
  class TestCircle{
  public void main(String[]args){
   Circle C1=new Circle(1.0,"red");
@@ -39,7 +39,7 @@ public class Circle {
   Circle C3=new Circle(3.0,"green");
   System.out.println("the Circle has radius of"+C3.getradius()+"and color"+C3.getcolor());
  }
- }}
+ }
     
     
 

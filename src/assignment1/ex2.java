@@ -15,17 +15,17 @@ public class ex2 {
       public static void main(String[]args){
  int nbattendees=2;
  int min=0,max=0;
- String[]movie={"La Presto","Luna"};
  Scanner input=new Scanner(System.in);
  System.out.println("enter the number of movie");
  int nbmovie=input.nextInt();
+ String[]movie=new String[nbmovie];
  int[]rate=new int[nbattendees];
- for(int i=0;i<movie.length;i++){
+ for(int i=0;i<nbmovie;i++){
  for(int j=0;j<nbattendees;j++){
  System.out.println("enter the number of movie");
- movie[i]=input.next();
+ movie[i]=input.nextLine();
  System.out.println("enter the number of attendees");
- int attendees=input.nextInt();
+ int attendees =input.nextInt();
  int sum[]=new int[nbattendees];
  System.out.println("rate"+movie[i]+"from 1 to 5");
  rate[i]=input.nextInt();
