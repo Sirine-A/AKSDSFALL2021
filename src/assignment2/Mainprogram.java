@@ -15,6 +15,5 @@ public class Mainprogram {
     movieDB.add(new Movie("Conjuring",2019));
     movieDB.add(new Movie("Imitation Game",2016));
     movieDB.add(new Movie("Wild Life",2010));
-    movieDB.display();
-    }    
+    movieDB.display();   }    
 }
