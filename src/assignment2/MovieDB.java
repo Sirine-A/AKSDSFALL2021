@@ -20,7 +20,6 @@ Movie[]moviesList=new Movie[BUFFER_SIZE];
 }
     effectiveNbMovies++;
     moviesList[effectiveNbMovies]=movie;
-    return (null);
 }
     void display(){
     for(Movie movie:moviesList){
