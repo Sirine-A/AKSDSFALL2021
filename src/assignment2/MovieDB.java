@@ -14,9 +14,11 @@ public class MovieDB {
 Movie[]moviesList=new Movie[BUFFER_SIZE];
     public Movie[] add(Movie movie){
     if(moviesList.length==effectiveNbMovies){
-        Movie[]newmoviesList = new Movie[moviesList.length*2];
-   System.arraycopy(moviesList,0,newmoviesList,0,moviesList.length);
-   return newmoviesList;
+        Movie[]newmoviesList = new Movie[moviesList.length+BUFFER_SIZE];
+for(int i=0;i<moviesList.length;i++){
+moviesList[i]=new moviesList[i];
+}
+moviesList=new moviesList;
 }
     effectiveNbMovies++;
     moviesList[effectiveNbMovies]=movie;
