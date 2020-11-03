@@ -13,14 +13,14 @@ package assignment2;
 public class ArrayList {
 private Object[]List;
 private int effectiveSize;
-private static final int BUFFER-SIZE=10;
+private static final int BUFFER_SIZE=10;
 public ArrayList(){
-List= new Object[BUFFER-SIZE];
-effecticeSize=0;
+List= new Object[BUFFER_SIZE];
+    int effecticeSize = 0;
 }
 public void add(Objective newElement){
-if(List.Length==effectiveSize){
-List=Arrays.copyOf(List,List.Length+BUFFER-SIZE);
+if(List.length==effectiveSize){
+List=Arrays.copyOf(List,List.length+BUFFER_SIZE);
 }
 List[effectiveSize]= newElement;
 effectiveSize;
@@ -30,8 +30,8 @@ if(index<0 || index>=effectiveSize){
 throw newArrayIndexOutOfBoundsException("invalid index"+index);
 }
 final object ValueToRemove=List[index];
-List[]newList= new List[List.Length-1];
-for(int i=0;i<List.Length;i++){
+List[]newList= new List[List.length-1];
+for(int i=0;i<List.length;i++){
 List[i]= newList[i-1];
 }
 List=newList;}
