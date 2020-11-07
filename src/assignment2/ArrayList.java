@@ -6,42 +6,64 @@
 
 package assignment2;
 
+import com.sun.corba.se.spi.orb.OperationFactory;
+import java.util.Arrays;
+
 /**
  *
  * @author hp
  */
-public class ArrayList {
-private Object[]List;
-private int effectiveSize;
+public class ArrayList implements NewInterface {
+   private Object[]List;
+private int effectiveSize=0;
 private static final int BUFFER_SIZE=10;
 public ArrayList(){
-List= new Object[BUFFER_SIZE];
-    int effecticeSize = 0;
+ List= new Object[BUFFER_SIZE];
 }
-public void add(Objective newElement){
+    @Override
+    public void add(Object newElement){
 if(List.length==effectiveSize){
 List=Arrays.copyOf(List,List.length+BUFFER_SIZE);
 }
 List[effectiveSize]= newElement;
-effectiveSize;
+effectiveSize++;
 }
-public Object remove(int index){
+   @Override
+    public int size(){
+        return effectiveSize;
+    }
+    @Override
+    public Object remove(int index){
 if(index<0 || index>=effectiveSize){
-throw newArrayIndexOutOfBoundsException("invalid index"+index);
+throw new ArrayIndexOutOfBoundsException("invalid index"+index);
 }
-final object ValueToRemove=List[index];
-List[]newList= new List[List.length-1];
-for(int i=0;i<List.length;i++){
-List[i]= newList[i-1];
+final Object ValueToRemove=List[index];
+if(effectiveSize%BUFFER_SIZE==0){
+List=Arrays.copyOf(List,List.length-BUFFER_SIZE);
 }
-List=newList;}
-List[effectiveSize]=newElement;
 effectiveSize--;
+return ValueToRemove;
 }
-public boolean remove(Object element){
-return false;
+    @Override
+    public boolean remove(Object element){
+    final int indexOfElementToRemove=indexOf(element);
+    if(indexOfElementToRemove==-1){
+return false;}
+remove(indexOfElementToRemove);
+return true;
 }
-public int IndexOf(Object element){
+    @Override
+    public int indexOf(Object element){
+    for(int i=0;i<List.length;i++){
+        if(List[i].equals(element)){
+            return i;
+        }
+    }
 return -1;
 }
+
+    @Override
+    public int size() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
